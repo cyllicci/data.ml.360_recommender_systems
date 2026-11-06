@@ -5,7 +5,10 @@ from pathlib import Path
 import numpy as np
 
 from src.data_loader import load_movielens_data
-from src.data_analysis import analyze_dataset
+from src.data_analysis import (
+    analyze_dataset,
+    analyze_interaction_distributions
+)
 
 # Reproducibility
 SEED = 42
@@ -56,20 +59,23 @@ def run_pipeline(data_dir):
     # 1. Load and parse data
     ratings, movies, users = load_data(data_dir)
 
-    # 2. Analyze data
+    # 2. Analyze dataset statistics
     stats = analyze_dataset(ratings, movies, users)
 
-    # 3. Preprocess data and create temporal split
+    # 3. Analyze rating and interaction distributions
+    analyze_interaction_distributions(ratings)
+
+    # 4. Preprocess data and create temporal split
     # TODO: Implement temporal split
 
-    # 4. Train recommendation models
+    # 5. Train recommendation models
     # TODO: Implement popularity baselines
     # TODO: Implement item-based kNN
 
-    # 5. Evaluate models
+    # 6. Evaluate models
     # TODO: Implement evaluation
 
-    # 6. Save results and figures
+    # 7. Save results and figures
     # TODO: Export results
 
     print("Project pipeline completed!")

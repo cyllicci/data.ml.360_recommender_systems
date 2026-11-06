@@ -12,8 +12,8 @@ This project uses Python 3.12.3
 ### 1. Clone the repository
 
 ```bash
-git clone <repository-url>
-cd <repository-name>
+git clone https://github.com/cyllicci/data.ml.360_recommender_systems.git
+cd data.ml.360_recommender_systems
 ```
 
 ### 2. Create a virtual environment

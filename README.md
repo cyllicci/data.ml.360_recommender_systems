@@ -47,3 +47,39 @@ When finished, you can deactivate the virtual environment:
 ```bash
 deactivate
 ```
+
+## Dataset
+
+This project uses the MovieLens 1M dataset provided by GroupLens.
+
+### Download instructions
+
+1. Download the MovieLens 1M dataset from:
+   https://grouplens.org/datasets/movielens/1m/
+
+2. Download the `ml-1m.zip` file.
+
+3. Extract the ZIP file.
+
+4. Place the extracted `ml-1m` folder inside the project's `data/` directory.
+
+The expected directory structure is:
+
+```text
+data/
+└── ml-1m/
+    ├── ratings.dat
+    ├── movies.dat
+    ├── users.dat
+    └── README
+```
+
+### Dataset files
+
+- `ratings.dat`: User ratings and timestamps.
+- `movies.dat`: Movie titles, release years and genres.
+- `users.dat`: User demographic information.
+
+### Usage terms
+
+The dataset is provided by GroupLens. Users must follow the dataset's official usage terms.

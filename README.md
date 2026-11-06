@@ -83,3 +83,21 @@ data/
 ### Usage terms
 
 The dataset is provided by GroupLens. Users must follow the dataset's official usage terms.
+
+## Running the project
+
+After downloading the MovieLens 1M dataset and installing the dependencies, run the project with:
+
+```bash
+python run_all.py --data-dir ./data/ml-1m
+```
+
+The `--data-dir` argument specifies the location of the MovieLens 1M dataset.
+
+The script will automatically:
+1. Load the dataset.
+2. Analyze the data.
+3. Create the temporal train/validation/test split.
+4. Train the recommendation models.
+5. Evaluate the models.
+6. Save results and figures.

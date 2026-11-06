@@ -5,6 +5,7 @@ from pathlib import Path
 import numpy as np
 
 from src.data_loader import load_movielens_data
+from src.data_analysis import analyze_dataset
 
 # Reproducibility
 SEED = 42
@@ -42,18 +43,6 @@ def load_data(data_dir):
     print(f"Loaded {len(movies)} movies")
     print(f"Loaded {len(users)} users")
 
-    print("\nRatings:")
-    print(ratings.head())
-
-    print("\nMovies:")
-    print(movies.head())
-
-    print("\nUsers:")
-    print(users.head())
-
-    print("\nData types:")
-    print(ratings.dtypes)
-
     return ratings, movies, users
 
 
@@ -68,7 +57,7 @@ def run_pipeline(data_dir):
     ratings, movies, users = load_data(data_dir)
 
     # 2. Analyze data
-    # TODO: Implement data analysis
+    stats = analyze_dataset(ratings, movies, users)
 
     # 3. Preprocess data and create temporal split
     # TODO: Implement temporal split
